@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <button (click)="onAddCard()">Click here to add card</button>
+  <br>
+  <br>
+
+<div class="card" *ngFor="let cardObject of dataModel">
+  <br>
+  <img [src]="setImage(cardObject)" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>{{cardObject.card_Name}}</b></h4> 
+    <p>{{cardObject.price}}</p> 
+    <button (click)="deleteCard(cardObject.cardId)">Delete Card</button>
+    <button (click)="editcard(cardObject.cardId)">Edit Card</button>
+
+  </div>
+  <br>
+  <br>
+  <br>
+</div>
+
+</body>
+</html> 
